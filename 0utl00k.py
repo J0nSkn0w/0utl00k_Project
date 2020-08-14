@@ -1,9 +1,9 @@
-SERVER = "smtp.example.com"
-FROM = "johnDoe@example.com"
-TO = ["JaneDoe@example.com"] # must be a list
+SERVER = "smtp.w1nt3f3ll.com"
+FROM = "jsknow@w1nt3f3ll.com"
+TO = ["astark@w1nt3f3ll.com"] # must be a list
 
-SUBJECT = "Hello!"
-TEXT = "This is a test of emailing through smtp of example.com."
+SUBJECT = "Winter is coming"
+TEXT = "This is just a test. Put any message here"
 
 # Prepare actual message
 message = """From: %s\r\nTo: %s\r\nSubject: %s\r\n\
@@ -14,6 +14,6 @@ message = """From: %s\r\nTo: %s\r\nSubject: %s\r\n\
 # Send the mail
 import smtplib
 server = smtplib.SMTP(SERVER)
-server.login("MrDoe", "PASSWORD")
+server.login("jsknow@w1nt3f3ll.com", "Targary3n")
 server.sendmail(FROM, TO, message)
 server.quit()
